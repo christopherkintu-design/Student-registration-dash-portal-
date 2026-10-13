@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Student Registration Portal school project">
+  <title>Student Registration Portal</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Student Portal home"><span class="brand-mark">SP</span><span>Student Portal</span></a>
+    <span class="top-note">Admissions &amp; Records</span>
+  </header>
+  <main id="top" class="page-shell">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">WELCOME TO OUR COMMUNITY</p>
+      <h1 id="page-title">Student registration</h1>
+      <p class="intro-copy">Complete the form below to register your details. Fields marked <span aria-hidden="true">*</span> are required.</p>
+      <div class="step-line"><span class="step-number">01</span><span>Your information</span><span class="step-rule"></span><span class="step-caption">About 3 minutes</span></div>
+    </section>
+
+    <section class="form-card" aria-label="Registration form">
+      <div class="card-heading"><div><h2>Personal details</h2><p>Enter your details carefully.</p></div><span class="required-note"><span>*</span> Required</span></div>
+      <form id="registration-form" novalidate>
+        <div class="form-grid">
+          <div class="field full-width"><label for="fullName">Full name <span>*</span></label><input id="fullName" name="fullName" autocomplete="name" maxlength="100" placeholder="e.g. Alex Namusoke" required><small class="error" id="fullName-error"></small></div>
+          <div class="field"><label for="gender">Gender <span>*</span></label><select id="gender" name="gender" required><option value="">Select an option</option><option>Female</option><option>Male</option><option>Prefer not to say</option></select><small class="error" id="gender-error"></small></div>
+          <div class="field"><label for="dateOfBirth">Date of birth <span>*</span></label><input id="dateOfBirth" name="dateOfBirth" type="date" required><small class="error" id="dateOfBirth-error"></small></div>
+          <div class="field"><label for="email">Email address <span>*</span></label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" maxlength="254" required><small class="error" id="email-error"></small></div>
+          <div class="field"><label for="phone">Phone number <span>*</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="e.g. +256 700 123456" required><small class="error" id="phone-error"></small></div>
+          <div class="field full-width"><label for="course">Course or programme <span>*</span></label><select id="course" name="course" required><option value="">Choose your programme</option><option>Information Technology</option><option>Computer Science</option><option>Business Administration</option><option>Education</option><option>Other</option></select><small class="error" id="course-error"></small></div>
+          <div class="field full-width"><label for="address">Residential address <span>*</span></label><textarea id="address" name="address" rows="3" maxlength="300" autocomplete="street-address" placeholder="District, town or area" required></textarea><small class="error" id="address-error"></small></div>
+        </div>
+        <p class="privacy-note">Please check your information before submitting. This school-project demo stores submitted records in a local database on the server running the project.</p>
+        <div class="form-actions"><button class="button button-primary" id="submit-button" type="submit">Submit registration <span aria-hidden="true">→</span></button><button class="button button-secondary" id="reset-button" type="reset">Clear form</button></div>
+        <div id="form-message" class="form-message" role="status" aria-live="polite" hidden></div>
+      </form>
+    </section>
+    <footer><span>Student Registration Portal</span><span>School project demonstration</span></footer>
+  </main>
+</body>
+</html>
